@@ -1,4 +1,4 @@
-FROM debian:buster as base
+FROM debian:bookworm as base
 ARG TARGETARCH
 ARG TARGETVARIANT
 
@@ -30,7 +30,7 @@ FROM base as base-armv7
 
 FROM base as base-arm64
 
-FROM balenalib/raspberry-pi-debian:buster-build-20210225 as base-armv6
+FROM balenalib/raspberry-pi-debian:bookworm-build-20250101 as base-armv6
 
 ENV LANG C.UTF-8
 ENV DEBIAN_FRONTEND=noninteractive
